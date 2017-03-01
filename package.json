@@ -10,8 +10,7 @@
   "license": "MIT",
   "author": "Josep Boix",
   "dependencies": {
-    "angular": "1.6.1",
-    "angular-route": "1.6.1"
+    "angular": "1.6.1"
   },
   "devDependencies": {
       "grunt": "^1.0.1",

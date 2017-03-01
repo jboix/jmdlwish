@@ -14,7 +14,6 @@
   <script src="node_modules/less/dist/less.min.js" data-concat="false" data-remove="true"></script>
 
   <script src="node_modules/angular/angular.js"></script>
-  <script src="node_modules/angular-route/angular-route.js"></script>
 
   <script src="src/jmdlwish.js"></script>
   <script src="src/controllers/MainController.js"></script>
@@ -23,5 +22,26 @@
   <script src="src/directives/item-layout/item-layout.js"></script>
   <script src="src/directives/newsletter-form/newsletter-form.js"></script>
 </head>
-<body ng-view></body>
+<body>
+<div class="main-layer" ng-controller="MainController as main">
+    <nav-header username="{{ username }}"></nav-header>
+    <div class="content"
+         ng-class="{'single-element': items.length === 0}"
+         ng-show="items">
+        <item-layout ng-class="{'single-element-list': items.length === 0}">
+            <item-card
+                ng-if="items.length > 0"
+                ng-repeat="item in items"
+                title="{{ ::item.title }}"
+                location="{{ ::item.location }}"
+                image="{{ ::item.image }}"
+                price="{{ ::item.price }}"
+                link="{{ ::item.link }}"
+                notes="{{ ::item.notes }}">
+            </item-card>
+            <newsletter-form ng-if="items.length === 0"></newsletter-form>
+        </item-layout>
+    </div>
+</div>
+</body>
 </html>

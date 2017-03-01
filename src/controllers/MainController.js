@@ -1,4 +1,4 @@
-angular.module('jmdlwish').controller('MainController', function($scope, $http) {
+angular.module('jmdlwish').controller('MainController', function($scope, $http, $log) {
     $scope.username = "Jérôme";
 
     $http({
@@ -12,6 +12,7 @@ angular.module('jmdlwish').controller('MainController', function($scope, $http) 
             $scope.items = [];
         }
     }, function(response) {
+        $log.error(response);
         $scope.items = [];
     });
 });

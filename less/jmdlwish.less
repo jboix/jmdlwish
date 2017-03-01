@@ -42,9 +42,30 @@ html, body {
 body {
     background: url('../img/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    overflow: hidden;
 }
 
-@import "../src/views/main.less";
+.main-layer {
+    @fill-available-space();
+    overflow: scroll;
+
+    .content {
+        padding-top: @header-height+20px;
+        padding-bottom: 20px;
+        width: auto;
+
+        &.single-element {
+            margin: 0;
+            height: 100%;
+
+            .single-element-list {
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+}
+
 @import "../src/directives/nav-header/nav-header.less";
 @import "../src/directives/item-layout/item-layout.less";
 @import "../src/directives/item-card/item-card.less";
