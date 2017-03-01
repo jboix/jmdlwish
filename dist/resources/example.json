@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "title": "Poliform",
+            "image": "img/poliform.png",
+            "price": "250 €",
+            "link": "http://www.poliform.it/fr/produits/poliform/complements-de-nuit/victor",
+            "notes": "Demandez Alexandre Mentha, il a déjà un devis fait avec les bonnes références.",
+            "location": "https://www.google.ch/maps/place/Batiplus+SA/@46.4857659,6.7504984,13.61z/data=!4m5!3m4!1s0x478c2f1820a13f7f:0x161739ad908f42dc!8m2!3d46.488224!4d6.769676?hl=fr"
+        },
+        {
+            "title": "Poliform",
+            "image": "img/lamp.jpeg",
+            "price": "250 €",
+            "link": "http://www.poliform.it/fr/produits/poliform/complements-de-nuit/victor",
+            "notes": "Demandez Alexandre Mentha, il a déjà un devis fait avec les bonnes références."
+        },
+        {
+            "title": "Poliform",
+            "image": "img/profile.jpg",
+            "price": "250 €",
+            "link": "http://www.poliform.it/fr/produits/poliform/complements-de-nuit/victor",
+            "notes": "Demandez Alexandre Mentha, il a déjà un devis fait avec les bonnes références.",
+            "location": "https://www.google.ch/maps/place/Batiplus+SA/@46.4857659,6.7504984,13.61z/data=!4m5!3m4!1s0x478c2f1820a13f7f:0x161739ad908f42dc!8m2!3d46.488224!4d6.769676?hl=fr"
+        },
+        {
+            "title": "Koala",
+            "image": "img/background.jpg",
+            "price": "250 €",
+            "notes": "Demandez Alexandre Mentha, il a déjà un devis fait avec les bonnes références.",
+            "location": "https://www.google.ch/maps/place/Batiplus+SA/@46.4857659,6.7504984,13.61z/data=!4m5!3m4!1s0x478c2f1820a13f7f:0x161739ad908f42dc!8m2!3d46.488224!4d6.769676?hl=fr"
+        },
+        {
+            "title": "Poliform",
+            "image": "img/poliform.png",
+            "price": "250 €",
+            "link": "http://www.poliform.it/fr/produits/poliform/complements-de-nuit/victor",
+            "notes": "Demandez Alexandre Mentha, il a déjà un devis fait avec les bonnes références.",
+            "location": "https://www.google.ch/maps/place/Batiplus+SA/@46.4857659,6.7504984,13.61z/data=!4m5!3m4!1s0x478c2f1820a13f7f:0x161739ad908f42dc!8m2!3d46.488224!4d6.769676?hl=fr"
+        }
+    ]
+}
