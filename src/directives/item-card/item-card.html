@@ -1,0 +1,20 @@
+<div class="present-card">
+    <div class="title-row">
+        <span><i class="fa fa-gift" aria-hidden="true"></i> {{ title }}</span>
+        <a ng-if="location" ng-href="{{ location }}" target="_blank">
+            <i class="fa fa-map" aria-hidden="true"></i>
+        </a>
+    </div>
+    <div class="picture-row"
+         ng-style="{
+            'background': 'url(' + image + ') no-repeat center center',
+            'background-size': 'cover'}">
+    </div>
+    <div class="footer-row">
+        <span>{{ price }}</span>
+        <a ng-if="link" ng-href="{{ link }}" target="_blank">Acheter en ligne</a>
+    </div>
+    <div class="info-row">
+      <div class="description">{{ notes }}</div>
+    </div>
+</div>

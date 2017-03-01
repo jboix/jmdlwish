@@ -1,5 +1,22 @@
-(function($) {
-    /*$(document).ready(function() {
+angular.module('jmdlwish', ['ngRoute']);
+
+angular.module('jmdlwish').config(function($routeProvider, $locationProvider) {
+    $routeProvider.when('/', {
+        templateUrl: "src/views/main.html"
+    });
+
+    $locationProvider.html5Mode({
+        enabled: true,
+        requireBase: false
+    }).hashPrefix('!');
+});
+
+angular.module('jmdlwish').run(function() {
+
+});
+
+/*(function($) {
+    $(document).ready(function() {
         $.ajax('resources/data.json').done(function(data) {
             // Check errors and shit
             if (data && data.presents && data.presents.length > 0) {
@@ -26,5 +43,5 @@
                 });
             }
         });
-    });*/
-}(window.jQuery));
+    });
+}(window.jQuery));*/

@@ -1,0 +1,55 @@
+.present-card {
+    a {
+        @button-set();
+    }
+ 
+    .picture-row {
+        height: 208px;
+    }
+
+    .title-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 15px;
+        font-size: 16px;
+
+        span {
+            @ellipsis();
+        }
+
+        a {
+            border: 0px;
+            padding: 0;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }   
+
+    .info-row {
+        padding: 15px;
+
+        .description {
+            vertical-align: middle;
+            font-size: 16spx;
+        }
+    }
+
+    .footer-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+        height: 34px;
+        font-size: 14px;
+
+        span {
+            @ellipsis();
+        }
+    }   
+}

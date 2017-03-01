@@ -55,7 +55,14 @@ module.exports = function (grunt) {
         stripBanners: true
       },
       dist: {
-        src: ['<%= dom_munger.data.dependencies %>'],
+        src: ['<%= dom_munger.data.dependencies %>', '<%= html2js.main.dest %>'],
+        dest: 'dist/<%= pkg.name %>.js'
+      }
+    },
+
+    ngAnnotate: {
+      main: {
+        src: 'dist/<%= pkg.name %>.js',
         dest: 'dist/<%= pkg.name %>.js'
       }
     },
@@ -64,7 +71,8 @@ module.exports = function (grunt) {
       main: {
         files: [
           {src: 'fonts/**', dest: 'dist/', filter: 'isFile', expand: true},
-          {src: 'img/**', dest: 'dist/', filter: 'isFile', expand: true}
+          {src: 'img/**', dest: 'dist/', filter: 'isFile', expand: true},
+          {src: 'resources/**', dest: 'dist/', filter: 'isFile', expand: true},
         ]
       }
     },
@@ -92,6 +100,20 @@ module.exports = function (grunt) {
         files: {
           'dist/index.html': 'dist/index.html'
         }
+      }
+    },
+
+    html2js: {
+      options: {
+        htmlmin: '<%= htmlmin.main.options %>',
+        existingModule: true,
+        singleModule: true,
+        module: 'jmdlwish',
+        base: ''
+      },
+      main: {
+        src: ['src/**/*.html'],
+        dest: 'tmp/templates.js'
       }
     },
 
@@ -152,8 +174,10 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:all',
     'jshint',
+    'html2js',
     'dom_munger:read',
     'concat',
+    'ngAnnotate',
     'uglify',
     'less',
     'cssmin',
